@@ -1,0 +1,14 @@
+{
+  "name": "codenation",
+  "version": "1.0.0",
+  "description": "aceleracao_vue",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
