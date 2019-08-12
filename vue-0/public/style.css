@@ -1,0 +1,13 @@
+.my-form-fields {
+	width: 50%;
+	text-align: center;
+}
+
+.my-table {
+	width: 60%;
+}
+
+.my-column {
+	display: flex;
+	justify-content: space-between;
+}

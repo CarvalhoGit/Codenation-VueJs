@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Verificador de Palíndromo</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  <meta charset="utf-8"/>
+  <body>
+  	<div class="container">
+  		<hr/>
+		<div class="d-flex justify-content-around">
+			<h3>Verificador de Palíndromo</h3>
+			<button id="apagar" type="button" class="btn btn-danger" data-test="limpar-dados">Apagar histórico</button>
+		</div>
+		<hr/>
+		<div class="d-flex justify-content-center">
+			<input id="input-frase" data-test="entrada" class="my-form-fields" type="text" placeholder="Palíndromo" required/>
+		</div>
+		<div class="d-flex justify-content-center">
+			<div class="my-table">
+				<table class="table table-borderless">
+					<thead>
+						<tr class="my-column">
+							<th scope="col">Frase</th>
+							<th scope="col">Palíndromo</th>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						<tr class="my-column conteudo">
+							<td>Arara</td>
+							<td data-verificado="positivo">Sim</td>
+						</tr>	
+					</tbody>
+				</table>
+			</div>			
+		</div>
+  	</div>
+  	<script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
