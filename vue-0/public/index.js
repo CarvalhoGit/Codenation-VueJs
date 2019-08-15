@@ -1,10 +1,17 @@
-const input = document.getElementById('input-frase');
-input.addEventListener('keydown', function validar(e){
-  let key = e.which || e.keyCode;
-  let frase = this.value;  
-  if (key == 13 && frase.replace( /\s/g, "")){
-  	input.value = "";
-  	let tbody = document.getElementById('tbody');
+const input = document.querySelector('#input-frase');
+const botao = document.querySelector('#apagar');
+const tbody = document.querySelector("tbody");
+
+var frases = JSON.parse(localStorage.getItem('frases')) || [];
+
+botao.onclick = apagar;
+input.onkeydown = add;
+
+renderizar(frases);
+
+function renderizar(frases) {
+	tbody.innerHTML = ''
+  for (frase of frases) {
     let tr = document.createElement('tr');
     let td_frase = document.createElement('td');
     let td_validacao = document.createElement('td');
@@ -20,27 +27,40 @@ input.addEventListener('keydown', function validar(e){
 	    td_validacao.textContent = 'Não';
 	    td_validacao.style.color = "red";
   	}  	
-  	tr.appendChild(td_validacao);
-  	return tbody.insertBefore(tr, tbody.childNodes[0]);
-  }});
+		tr.appendChild(td_validacao);
+		tbody.insertBefore(tr, tbody.childNodes[0]);
+  }};
 
-const botao = document.getElementById("apagar");
-botao.addEventListener('click', function apagar(e){
-	let conteudo = document.getElementsByClassName("conteudo");
-	while (conteudo[0]) {
-		conteudo[0].remove();
+function add(e) {
+	let key = e.which || e.keyCode;
+	let frase = input.value;
+	if (key == 13 && frase) {
+		frases.push(input.value);
+		input.value = "";
+		renderizar(frases);
+		save();				
 	}
-	return conteudo;
-})
+}
+	
+function apagar() {	
+	while (tbody.firstChild) {
+		tbody.removeChild(tbody.firstChild);
+	}
+	frases = localStorage.removeItem('frases') || [];
+};
 
-function invertedWord(arg1){
+function save() {
+	localStorage.setItem('frases', JSON.stringify(frases));
+}
+
+function invertedWord(arg1) {
     let array = arg1.replace( /\s/g, "").split("");
     let invertedArray = array.reverse();
     let invertedString = invertedArray.join("");
     return invertedString;
 };
 
-function isPalindrome(arg1){
+function isPalindrome(arg1) {
     let arg2 = arg1.toLowerCase().replace( /\s/g, "");
     return invertedWord(arg2) == arg2 && arg2;
 };
