@@ -10,7 +10,7 @@ input.onkeydown = add;
 renderizar(frases);
 
 function renderizar(frases) {
-	tbody.innerHTML = ''
+	tbody.innerHTML = '';
   for (frase of frases) {
     let tr = document.createElement('tr');
     let td_frase = document.createElement('td');
@@ -19,16 +19,16 @@ function renderizar(frases) {
     td_frase.textContent = frase;
     tr.appendChild(td_frase);
   	if (isPalindrome(frase)) {
-  		td_validacao.setAttribute('data-verificado', 'positivo');
-	    td_validacao.textContent = 'Sim'
+  		td_frase.setAttribute('data-verificado', 'positivo');
+	    td_validacao.textContent = 'Sim';
 	    td_validacao.style.color = "green";
   	} else {
-  		td_validacao.setAttribute('data-verificado', 'negativo');	    
+  		td_frase.setAttribute('data-verificado', 'negativo');	    
 	    td_validacao.textContent = 'Não';
 	    td_validacao.style.color = "red";
   	}  	
-		tr.appendChild(td_validacao);
-		tbody.insertBefore(tr, tbody.childNodes[0]);
+	tr.appendChild(td_validacao);
+	tbody.insertBefore(tr, tbody.childNodes[0]);
   }};
 
 function add(e) {
@@ -38,7 +38,7 @@ function add(e) {
 		frases.push(input.value);
 		input.value = "";
 		renderizar(frases);
-		save();				
+		save();
 	}
 }
 	
@@ -46,11 +46,11 @@ function apagar() {
 	while (tbody.firstChild) {
 		tbody.removeChild(tbody.firstChild);
 	}
-	frases = localStorage.removeItem('frases') || [];
+	return localStorage.removeItem('frases') || [];
 };
 
 function save() {
-	localStorage.setItem('frases', JSON.stringify(frases));
+	return localStorage.setItem('frases', JSON.stringify(frases));
 }
 
 function invertedWord(arg1) {
