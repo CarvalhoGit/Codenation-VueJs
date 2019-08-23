@@ -2,7 +2,7 @@ const input = document.querySelector('#input-frase');
 const botao = document.querySelector('#apagar');
 const tbody = document.querySelector("tbody");
 
-var frases = JSON.parse(localStorage.getItem('frases')) || [];
+let frases = [];
 
 botao.onclick = apagar;
 input.onkeydown = add;
@@ -38,20 +38,13 @@ function add(e) {
 		frases.push(input.value);
 		input.value = "";
 		renderizar(frases);
-		save();
 	}
 }
 	
 function apagar() {	
-	while (tbody.firstChild) {
-		tbody.removeChild(tbody.firstChild);
-	}
-	return localStorage.removeItem('frases') || [];
+	frases = [];
+	renderizar(frases);
 };
-
-function save() {
-	return localStorage.setItem('frases', JSON.stringify(frases));
-}
 
 function invertedWord(arg1) {
     let array = arg1.replace( /\s/g, "").split("");
