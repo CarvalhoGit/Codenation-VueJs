@@ -2,7 +2,7 @@ const input = document.querySelector('#input-frase');
 const botao = document.querySelector('#apagar');
 const tbody = document.querySelector("tbody");
 
-var frases = JSON.parse(localStorage.getItem('frases')) || [];
+let frases = [];
 
 botao.onclick = apagar;
 input.onkeydown = add;
@@ -19,11 +19,11 @@ function renderizar(frases) {
     td_frase.textContent = frase;
     tr.appendChild(td_frase);
   	if (isPalindrome(frase)) {
-  		td_frase.setAttribute('data-verificado', 'positivo');
+  		td_validacao.setAttribute('data-verificado', 'positivo');
 	    td_validacao.textContent = 'Sim';
 	    td_validacao.style.color = "green";
   	} else {
-  		td_frase.setAttribute('data-verificado', 'negativo');	    
+  		td_validacao.setAttribute('data-verificado', 'negativo');	    
 	    td_validacao.textContent = 'Não';
 	    td_validacao.style.color = "red";
   	}  	
@@ -33,25 +33,18 @@ function renderizar(frases) {
 
 function add(e) {
 	let key = e.which || e.keyCode;
-	let frase = input.value;
+	let frase = input.value.trim();
 	if (key == 13 && frase) {
 		frases.push(input.value);
 		input.value = "";
 		renderizar(frases);
-		save();
 	}
 }
 	
 function apagar() {	
-	while (tbody.firstChild) {
-		tbody.removeChild(tbody.firstChild);
-	}
-	return localStorage.removeItem('frases') || [];
+	frases = [];
+	renderizar(frases);
 };
-
-function save() {
-	return localStorage.setItem('frases', JSON.stringify(frases));
-}
 
 function invertedWord(arg1) {
     let array = arg1.replace( /\s/g, "").split("");
