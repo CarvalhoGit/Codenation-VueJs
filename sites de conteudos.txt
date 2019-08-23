@@ -27,3 +27,17 @@ https://tableless.github.io/iniciantes/manual/js/
 https://github.com/cezaraugusto/You-Dont-Know-JS
 
 https://www.youtube.com/watch?v=PkZNo7MFNFg
+
+https://bootstrap-vue.js.org/
+
+https://scrimba.com/g/glearnvue
+
+https://vuejs.org/v2/guide/index.html
+
+https://laracasts.com/series/learn-vue-2-step-by-step
+
+https://www.telerik.com/blogs/hello-vue-a-quick-tutorial-on-getting-started-with-vue
+
+https://medium.com/@matheusml/o-guia-do-es6-tudo-que-voc%C3%AA-precisa-saber-8c287876325f
+
+https://buefy.org/
