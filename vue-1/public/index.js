@@ -3,6 +3,7 @@
 	data: {
 		title: "Verificador de Palíndromo",
 		button: {
+			title: "Apagar histórico",
 			class: "btn btn-primary",
 		},
 		input: {
@@ -12,33 +13,37 @@
 				'text-align': "center",
 			}
 		},
-		table: ['Frases', 'Palíndromo'],
-		frases: ['ladams', 'ndfjnsfds', 'ndfsjnf', 'nfdjsn'],
+		columns: ['Frases', 'Palíndromo'],
+		rows: [
+		['Arara', 'Sim'],
+		['Teste', 'Não'],
+		]
 	},
-	components: {CodeButton, CodeInput, CodeThead, CodeTbody},
+	components: {Table},
 	template: `
 	<div class="container">
 		<hr>
 		<div class="d-flex justify-content-between align-items-center">
 			<label>{{title}}</label>
-			<code-button :class="button.class" title='Apagar Histórico'></code-button>
+			<button :class="button.class">{{button.title}}</button>
 		</div>
 		<hr>
 		<div class="d-flex justify-content-center">
-			<code-input :placeholder="input.placeholder" :style="input.style"></code-input>
+			<input :placeholder="input.placeholder" :style="input.style"></input>
 		</div>
 		<div>
-			<table class="table">
-				<code-thead>
-					<th scope="col" v-for="column in table">{{column}}</th>
-				</code-thead>
-				<code-tbody>
-					<tr v-for="frase in frases">
-						<td>{{frase}}</td>
-						
-					</tr>					
-				</code-tbody>
-			</table>
+			<Table>
+				<template v-slot:tr-th>
+					<tr class="d-flex justify-content-between">
+						<th v-for="column in columns">{{column}}</th>
+					</tr>
+				</template>
+				<template v-slot:tr-td>
+					<tr v-for="row in rows" class="d-flex justify-content-between">
+						<td v-for="item in row">{{item}}</td>
+					</tr>
+				</template>
+			</Table>
 		</div>
 	</div>
 	`,

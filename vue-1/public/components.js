@@ -1,26 +1,12 @@
-const CodeButton = {
-	props: ['title'],
-	template: '<button>{{title}}</button>',
-};
-
-const CodeInput = {
-	template: '<input/>'
-};
-
-const CodeThead = {
+const Table = {
 	template: `
-	<thead>
-		<tr>
-			<slot></slot>
-		</tr>
-	</thead>
+	<table class="table">
+		<thead>
+			<slot name="tr-th"></slot>
+		</thead>
+		<tbody>
+			<slot name="tr-td"></slot>
+		</tbody>
+	</table>
 	`
-};
-
-const CodeTbody = {
-	template: `
-	<tbody>
-		<slot></slot>
-	</tbody>
-	`
-};
+}
