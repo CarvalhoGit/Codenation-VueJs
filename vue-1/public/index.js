@@ -1,26 +1,55 @@
-	let app = new Vue({
-	el: "#app",
-	data: {
-		title: "Verificador de Palíndromo",
-		button: {
-			title: "Apagar histórico",
-			class: "btn btn-primary",
-		},
-		input: {
-			placeholder: "Palíndromo",
-			style: {
-				'width': "100%",
-				'text-align': "center",
-			}
-		},
-		columns: ['Frases', 'Palíndromo'],
-		rows: [
-		['Arara', 'Sim'],
-		['Teste', 'Não'],
-		]
-	},
-	components: {Table},
-	template: `
+let app = new Vue({
+  el: "#app",
+
+  components: { Table },
+
+  data() {
+    return {
+      title: "Verificador de Palíndromo",
+
+      button: {
+        title: "Apagar histórico",
+        class: "btn btn-primary"
+      },
+
+      input: {
+        placeholder: "Palíndromo",
+        style: {
+          width: "100%",
+          "text-align": "center"
+        }
+      },
+      frase: "",
+
+      columns: ["Frases", "Palíndromo"],
+
+      frases: []
+    };
+  },
+
+  methods: {
+    invertedWord(arg1) {
+      let array = arg1.replace(/\s/g, "").split("");
+      let invertedArray = array.reverse();
+      let invertedString = invertedArray.join("");
+      return invertedString;
+    },
+
+    isPalindrome(arg1) {
+      let arg2 = arg1.toLowerCase().replace(/\s/g, "");
+      return this.invertedWord(arg2) === arg2 && arg2;
+    },
+
+    addWord(arg1) {
+      arg1 = arg1.trim();
+      if (arg1) {
+        this.frases.push(arg1);
+        this.frase = "";
+      }
+    }
+  },
+
+  template: `
 	<div class="container">
 		<hr>
 		<div class="d-flex justify-content-between align-items-center">
@@ -29,22 +58,12 @@
 		</div>
 		<hr>
 		<div class="d-flex justify-content-center">
-			<input :placeholder="input.placeholder" :style="input.style"></input>
+			<input v-model="frase" @keydown.enter="addWord(frase)" :placeholder="input.placeholder" :style="input.style"></input>
 		</div>
 		<div>
-			<Table>
-				<template v-slot:tr-th>
-					<tr class="d-flex justify-content-between">
-						<th v-for="column in columns">{{column}}</th>
-					</tr>
-				</template>
-				<template v-slot:tr-td>
-					<tr v-for="row in rows" class="d-flex justify-content-between">
-						<td v-for="item in row">{{item}}</td>
-					</tr>
-				</template>
+			<Table :frases="frases" :columns="columns" :isPalindrome="isPalindrome">
 			</Table>
 		</div>
 	</div>
-	`,
-})
+	`
+});
