@@ -46,6 +46,10 @@ let app = new Vue({
         this.frases.push(arg1);
         this.frase = "";
       }
+    },
+
+    removerHist() {
+      return (this.frases = []);
     }
   },
 
@@ -54,11 +58,11 @@ let app = new Vue({
 		<hr>
 		<div class="d-flex justify-content-between align-items-center">
 			<label>{{title}}</label>
-			<button :class="button.class">{{button.title}}</button>
+			<button data-test="limpar-dados" @click="removerHist()" :class="button.class">{{button.title}}</button>
 		</div>
 		<hr>
 		<div class="d-flex justify-content-center">
-			<input v-model="frase" @keydown.enter="addWord(frase)" :placeholder="input.placeholder" :style="input.style"></input>
+			<input data-test="entrada" v-model="frase" @keydown.enter="addWord(frase)" :placeholder="input.placeholder" :style="input.style"></input>
 		</div>
 		<div>
 			<Table :frases="frases" :columns="columns" :isPalindrome="isPalindrome">

@@ -20,8 +20,8 @@ const Table = {
 		<tbody>
 			<tr v-for="frase in frases.slice().reverse()" class="d-flex justify-content-between">
 				<td style="width: 100%;">{{frase}}</td>
-				<td v-if="isPalindrome(frase)" :style="stylepalindrome">Sim</td>
-				<td v-else :style="stylenotpalindrome">Não</td>
+				<td data-verificado="positivo" v-if="isPalindrome(frase)" :style="stylepalindrome">Sim</td>
+				<td data-verificado="negativo" v-else :style="stylenotpalindrome">Não</td>
 			</tr>
 		</tbody>
 	</table>
