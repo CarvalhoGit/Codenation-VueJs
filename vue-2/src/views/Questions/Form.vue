@@ -11,7 +11,7 @@
         <div
           class="control"
           v-for="opcao in question.opcoes"
-          :data-resposta="{'correta': opcao.correct === true, 'errada': opcao.correct === false}"
+          :data-resposta="opcao.correct === true ? 'correta' : 'errada'"
         >
           <input
             class="input"
