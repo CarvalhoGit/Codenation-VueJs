@@ -1,0 +1,53 @@
+<router-link> substitui o <a>
+
+
+import { mapActions } from "vuex";
+...mapActions('arquivo', ['funcao'])
+criar pasta store e um arquivo para cada requisicao necessaria
+
+
+path: '/',
+redirect: '/login'
+
+
+autocomplete="new-password"
+stopPropagation - somente o botao que foi clicado aciona o evento. evita por exemplo, caso um botao esteja dentro de outro, que todos acionem o evento
+@submit.prevent - evita que o form execute a acao de redirect
+
+
+object destructed
+<p v-for="{message} in errors"> {{message}}
+ao invés de
+<p v-for="message in errors"> {{message.message}}
+
+
+mjml - email responsivel framework
+
+
+Array.isArray(variavel)
+
+
+para definir um parametro na url usa-se ":nome_parametro"
+props: true
+no component deve-se definir uma props com o mesmo nome definido no path, ou seja (nome_parametro)
+
+
+finally {} - independente se der erro ou nao na requisicao, ele ira executar o que tiver dentro.
+
+
+axios interceptor.
+vue interceptor
+
+
+path: '/**' - caso digitado qualquer rota que nao existe, ele redireciona para o /login
+redirect: '/login'
+
+
+animate.css
+transition
+
+
+vue add unit-jest
+
+
+
