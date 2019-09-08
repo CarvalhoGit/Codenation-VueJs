@@ -1,5 +1,5 @@
 <template>
-  <div class="card" v-show="notFound || empty">
+  <div class="card">
     <div class="card-image">
       <figure class="image is-4by3">
         <img

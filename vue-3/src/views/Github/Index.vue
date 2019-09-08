@@ -10,6 +10,7 @@
     ></Search>
     <Repositories :user="user" :repositories="repositories">
       <ResultSearch
+        v-if="notFound || empty"
         :notFound="notFound"
         :empty="empty"
         :data-test="verifyDataTest ? 'nao-encontrado' : 'sem-repositorios'"
