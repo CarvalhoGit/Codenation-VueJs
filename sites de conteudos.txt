@@ -51,3 +51,25 @@ https://medium.com/@nicomeyer/vue-js-slots-vs-props-af87078a8bd
 https://codeburst.io/creating-a-basic-vue-plugin-a-quick-and-practical-example-cb56fa9a7d09
 
 https://css-tricks.com/getting-started-with-vue-plugins/
+
+https://br.vuejs.org/v2/guide/forms.html
+
+https://blog.matheuscastiglioni.com.br/trabalhando-com-promises-em-javascript/
+
+https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch
+
+https://css-tricks.com/form-validation-in-under-an-hour-with-vuelidate/
+
+https://developer.github.com/v3/users/
+
+https://router.vuejs.org/
+
+https://blog.schoolofnet.com/o-que-e-uma-spa-single-page-application/
+
+https://www.adcisolutions.com/knowledge/how-build-single-page-application-spa-vuejs
+
+https://vuex.vuejs.org/ptbr/
+
+https://scrimba.com/g/gvuex
+
+https://medium.com/codigorefinado/gerenciando-estado-com-vuex-2accf11e9849
