@@ -73,3 +73,13 @@ https://vuex.vuejs.org/ptbr/
 https://scrimba.com/g/gvuex
 
 https://medium.com/codigorefinado/gerenciando-estado-com-vuex-2accf11e9849
+
+https://www.cloudflare.com/pt-br/
+
+https://pages.github.com/
+
+https://www.netlify.com/
+
+http://vuejs-brasil.com.br/exporte-seu-projeto-vue-para-o-github-pages/
+
+https://medium.com/@lpellis/deploying-vue-with-netlify-from-scratch-28b6c2249081
