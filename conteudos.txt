@@ -19,3 +19,13 @@ https://getbootstrap.com.br/
 https://bulma.io/
 
 https://element.eleme.io/#/en-US
+
+https://pt.wikipedia.org/wiki/Pal%C3%ADndromo
+
+https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico
+
+https://tableless.github.io/iniciantes/manual/js/
+
+https://github.com/cezaraugusto/You-Dont-Know-JS
+
+https://www.youtube.com/watch?v=PkZNo7MFNFg
