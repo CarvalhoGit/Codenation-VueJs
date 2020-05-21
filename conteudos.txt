@@ -56,3 +56,12 @@ https://css-tricks.com/getting-started-with-vue-plugins/
 
 https://www.buzzfeed.com/br/hannahloewentheil/teste-comidas-chiques-cidade-viajar
 
+https://br.vuejs.org/v2/guide/forms.html
+
+https://blog.matheuscastiglioni.com.br/trabalhando-com-promises-em-javascript/
+
+https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch
+
+https://css-tricks.com/form-validation-in-under-an-hour-with-vuelidate/
+
+https://developer.github.com/v3/users/
