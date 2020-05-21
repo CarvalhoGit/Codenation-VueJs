@@ -10,4 +10,12 @@ https://scrimba.com/g/gflexbox
 
 https://www.youtube.com/watch?v=014fy8sGPto&list=PLB7wuPF7rlckDdLVxueGuQIpI_3Nl2pCt&index=1
 
+https://medium.com/@simoneas02/voc%C3%AA-precisa-de-um-framework-css-922c02ade6a5
 
+https://tableless.com.br/quando-utilizar-ou-nao-frameworks-css/
+
+https://getbootstrap.com.br/
+
+https://bulma.io/
+
+https://element.eleme.io/#/en-US
