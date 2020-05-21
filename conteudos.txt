@@ -43,3 +43,16 @@ https://laracasts.com/series/learn-vue-2-step-by-step
 https://www.telerik.com/blogs/hello-vue-a-quick-tutorial-on-getting-started-with-vue
 
 https://medium.com/@matheusml/o-guia-do-es6-tudo-que-voc%C3%AA-precisa-saber-8c287876325f
+
+https://cli.vuejs.org/
+
+https://br.vuejs.org/v2/guide/single-file-components.html
+
+https://medium.com/@nicomeyer/vue-js-slots-vs-props-af87078a8bd
+
+https://codeburst.io/creating-a-basic-vue-plugin-a-quick-and-practical-example-cb56fa9a7d09
+
+https://css-tricks.com/getting-started-with-vue-plugins/
+
+https://www.buzzfeed.com/br/hannahloewentheil/teste-comidas-chiques-cidade-viajar
+
