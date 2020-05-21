@@ -1,0 +1,13 @@
+https://learn.shayhowe.com/html-css/building-your-first-web-page/
+
+https://www.w3schools.com/html/html5_semantic_elements.asp
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+https://flexboxfroggy.com/
+
+https://scrimba.com/g/gflexbox
+
+https://www.youtube.com/watch?v=014fy8sGPto&list=PLB7wuPF7rlckDdLVxueGuQIpI_3Nl2pCt&index=1
+
+
