@@ -65,3 +65,9 @@ https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch
 https://css-tricks.com/form-validation-in-under-an-hour-with-vuelidate/
 
 https://developer.github.com/v3/users/
+
+https://router.vuejs.org/
+
+https://blog.schoolofnet.com/o-que-e-uma-spa-single-page-application/
+
+https://www.adcisolutions.com/knowledge/how-build-single-page-application-spa-vuejs
