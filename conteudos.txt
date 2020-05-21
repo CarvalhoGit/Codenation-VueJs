@@ -71,3 +71,9 @@ https://router.vuejs.org/
 https://blog.schoolofnet.com/o-que-e-uma-spa-single-page-application/
 
 https://www.adcisolutions.com/knowledge/how-build-single-page-application-spa-vuejs
+
+https://vuex.vuejs.org/ptbr/
+
+https://scrimba.com/g/gvuex
+
+https://medium.com/codigorefinado/gerenciando-estado-com-vuex-2accf11e9849
